@@ -23,7 +23,7 @@ const script = Dancing_Script({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.sreeinfotech.com"),
+  metadataBase: new URL("https://sreeinfotechnologies.com"),
   title: {
     default: "Sree Info Technologies Pvt Ltd — Consult. Outsource. Grow.",
     template: "%s | Sree Info Technologies",

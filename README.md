@@ -22,12 +22,42 @@ npm install
 npm run dev        # http://localhost:3000
 ```
 
-Build for production:
+Build for production (static export → `./out`):
 
 ```bash
-npm run build
-npm run start
+npm run build      # outputs a static site in ./out
 ```
+
+## 🌐 Deploy to GitHub Pages
+
+This site is configured as a **static export** (`output: "export"` in
+[`next.config.mjs`](next.config.mjs)) and deploys automatically to GitHub Pages
+via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+**One-time setup:**
+
+1. **Enable Pages**: Repo → **Settings → Pages → Build and deployment → Source =
+   _GitHub Actions_**.
+2. **Push to `main`** — the workflow builds the static export and publishes it.
+3. **Custom domain**: the [`public/CNAME`](public/CNAME) file pins the domain to
+   `sreeinfotechnologies.com`. After the first successful deploy, confirm it
+   under **Settings → Pages → Custom domain** and tick **Enforce HTTPS**.
+4. **DNS** (at your domain registrar) — point the apex domain at GitHub:
+
+   | Type  | Host / Name | Value                          |
+   | ----- | ----------- | ------------------------------ |
+   | A     | `@`         | `185.199.108.153`              |
+   | A     | `@`         | `185.199.109.153`              |
+   | A     | `@`         | `185.199.110.153`              |
+   | A     | `@`         | `185.199.111.153`              |
+   | AAAA  | `@`         | `2606:50c0:8000::153`          |
+   | AAAA  | `@`         | `2606:50c0:8001::153`          |
+   | AAAA  | `@`         | `2606:50c0:8002::153`          |
+   | AAAA  | `@`         | `2606:50c0:8003::153`          |
+   | CNAME | `www`       | `sreeinfotechnologies.github.io.` |
+
+   DNS can take up to ~24h to propagate. Once `sreeinfotechnologies.com`
+   resolves to GitHub, enable **Enforce HTTPS**.
 
 ## 📁 Folder structure
 
@@ -82,8 +112,9 @@ section re-renders — no need to touch the components.
 
 ## 🔌 Wiring the contact form to a real backend
 
-`Contact.jsx` currently simulates a successful submit. To make it live, post `values` to an
-API route (`src/app/api/contact/route.js`) or a service like Formspree / Resend inside `handleSubmit`.
+`Contact.jsx` currently simulates a successful submit. Because GitHub Pages is static hosting,
+Next.js API routes are **not** available — post `values` to an external form service
+(e.g. Formspree, Web3Forms, or Resend via a serverless function) inside `handleSubmit`.
 
 ---
 
