@@ -5,7 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/data";
 import { getIcon } from "@/lib/icons";
-import SectionHeading from "./ui/SectionHeading";
+import SectionHeading from "@/components/ui/SectionHeading";
+import styles from "./Services.module.scss";
 
 const EASE = [0.22, 0.61, 0.36, 1];
 
@@ -21,7 +22,7 @@ export default function Services() {
   );
 
   return (
-    <section id="services" className="section bg-cream dot-grid-navy">
+    <section id="services" className={`${styles.root} section`}>
       <div className="container-x">
         <SectionHeading
           badge="Our Services"

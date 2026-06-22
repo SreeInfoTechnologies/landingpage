@@ -1,11 +1,12 @@
 import { CheckCircle2 } from "lucide-react";
 import { features } from "@/lib/data";
-import SectionHeading from "./ui/SectionHeading";
-import { Stagger, StaggerItem } from "./ui/Reveal";
+import SectionHeading from "@/components/ui/SectionHeading";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import styles from "./WhyChooseUs.module.scss";
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="section bg-white">
+    <section id="why" className={`${styles.root} section`}>
       <div className="container-x">
         <SectionHeading
           badge="Why Choose Us"

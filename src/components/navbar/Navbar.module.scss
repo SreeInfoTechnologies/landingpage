@@ -1,0 +1,14 @@
+// Navbar — custom styling for the scroll-aware header bar.
+// Layout (flex, spacing, responsive) stays as Tailwind classes in Navbar.jsx.
+
+.header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+// Solid translucent bar once the page is scrolled
+.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(21, 35, 63, 0.07);
+}

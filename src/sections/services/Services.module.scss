@@ -1,0 +1,7 @@
+// Services — cream panel with a subtle navy dot grid.
+// Filter buttons and cards are styled with Tailwind in Services.jsx.
+.root {
+  background-color: #f8f5ef;
+  background-image: radial-gradient(rgba(21, 35, 63, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}

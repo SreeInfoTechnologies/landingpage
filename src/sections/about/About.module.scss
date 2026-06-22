@@ -1,0 +1,8 @@
+// About — cream panel with a subtle navy dot grid.
+// Layout, spacing and the inner cards are styled with Tailwind in About.jsx.
+.root {
+  position: relative;
+  background-color: #f8f5ef;
+  background-image: radial-gradient(rgba(21, 35, 63, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}

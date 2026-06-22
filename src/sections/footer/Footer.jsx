@@ -1,12 +1,13 @@
 import { MapPin, Mail, Globe } from "lucide-react";
-import Logo from "./Logo";
+import Logo from "@/components/logo/Logo";
 import { company, nav } from "@/lib/data";
+import styles from "./Footer.module.scss";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 text-white/75">
+    <footer className={`${styles.root} text-white/75`}>
       <div className="container-x grid gap-10 py-16 md:grid-cols-[1.4fr_1fr_1.2fr]">
         {/* brand */}
         <div>

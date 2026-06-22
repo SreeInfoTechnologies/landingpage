@@ -1,11 +1,12 @@
 import { Check, Briefcase } from "lucide-react";
 import { careers } from "@/lib/data";
-import SectionHeading from "./ui/SectionHeading";
-import Reveal, { Stagger, StaggerItem } from "./ui/Reveal";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal, { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import styles from "./Careers.module.scss";
 
 export default function Careers() {
   return (
-    <section id="careers" className="section bg-cream dot-grid-navy">
+    <section id="careers" className={`${styles.root} section`}>
       <div className="container-x">
         <SectionHeading
           badge="Careers"

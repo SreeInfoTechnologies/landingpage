@@ -1,10 +1,11 @@
 import { Check } from "lucide-react";
 import { payroll } from "@/lib/data";
-import Reveal from "./ui/Reveal";
+import Reveal from "@/components/ui/Reveal";
+import styles from "./Payroll.module.scss";
 
 export default function Payroll() {
   return (
-    <section id="payroll" className="section bg-cream">
+    <section id="payroll" className={`${styles.root} section`}>
       <div className="container-x grid items-center gap-12 lg:grid-cols-2">
         {/* text */}
         <Reveal>

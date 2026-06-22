@@ -1,10 +1,11 @@
 import { TrendingUp, ArrowRight } from "lucide-react";
 import { marketing } from "@/lib/data";
-import Reveal from "./ui/Reveal";
+import Reveal from "@/components/ui/Reveal";
+import styles from "./Marketing.module.scss";
 
 export default function Marketing() {
   return (
-    <section id="marketing" className="section bg-white">
+    <section id="marketing" className={`${styles.root} section`}>
       <div className="container-x grid items-center gap-12 lg:grid-cols-2">
         {/* services panel (left on desktop) */}
         <Reveal className="lg:order-2">

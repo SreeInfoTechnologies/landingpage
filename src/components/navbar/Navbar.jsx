@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Logo from "./Logo";
+import Logo from "@/components/logo/Logo";
 import { nav } from "@/lib/data";
+import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,10 +50,8 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 shadow-soft backdrop-blur-md"
-          : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 ${styles.header} ${
+        scrolled ? styles.scrolled : "bg-transparent"
       }`}
     >
       <nav className="container-x flex h-[72px] items-center justify-between">

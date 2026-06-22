@@ -1,0 +1,5 @@
+// Brand logo — non-selectable inline mark + wordmark.
+// The SVG mark and wordmark are styled with Tailwind in Logo.jsx.
+.root {
+  user-select: none;
+}

@@ -23,11 +23,21 @@ module.exports = {
         },
         cream: "#f8f5ef",
         ink: "#1f2937",
+        // Luxe hero palette (dark gold-dust hero section)
+        luxe: {
+          ink: "#0A1020",
+          ink2: "#0D1424",
+          paper: "#F1F3F8",
+          muted: "#9AA5B9",
+          gold: "#CBA85F",
+          goldsoft: "#E4CF99",
+        },
       },
       fontFamily: {
         heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
         script: ["var(--font-script)", "cursive"],
+        cormorant: ["var(--font-cormorant)", "Georgia", "serif"],
       },
       boxShadow: {
         soft: "0 2px 10px rgba(21,35,63,0.07)",

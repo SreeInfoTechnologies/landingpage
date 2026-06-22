@@ -1,11 +1,12 @@
 import { values } from "@/lib/data";
 import { getIcon } from "@/lib/icons";
-import { Stagger, StaggerItem } from "./ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import styles from "./Values.module.scss";
 
 /** The four brand values, shown as a compact strip of cards. */
 export default function Values() {
   return (
-    <section className="section bg-white">
+    <section className={`${styles.root} section`}>
       <div className="container-x">
         <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" stagger={0.1}>
           {values.map((v) => {

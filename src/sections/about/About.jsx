@@ -1,11 +1,12 @@
 import { Target, Rocket, Quote } from "lucide-react";
 import { visionMission, company } from "@/lib/data";
-import SectionHeading from "./ui/SectionHeading";
-import Reveal, { Stagger, StaggerItem } from "./ui/Reveal";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal, { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import styles from "./About.module.scss";
 
 export default function About() {
   return (
-    <section id="about" className="section relative bg-cream dot-grid-navy">
+    <section id="about" className={`${styles.root} section`}>
       <div className="container-x">
         <SectionHeading
           badge="About Us"

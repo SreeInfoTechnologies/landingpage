@@ -4,8 +4,9 @@ import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
 import { contact, company } from "@/lib/data";
 import { getIcon } from "@/lib/icons";
-import SectionHeading from "./ui/SectionHeading";
-import Reveal from "./ui/Reveal";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
+import styles from "./Contact.module.scss";
 
 const validators = {
   name: (v) => (v.trim().length >= 2 ? "" : "Please enter your name."),
@@ -47,7 +48,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section bg-white">
+    <section id="contact" className={`${styles.root} section`}>
       <div className="container-x">
         <SectionHeading
           badge="Contact Us"

@@ -1,4 +1,5 @@
 import { specializations } from "@/lib/data";
+import styles from "./Marquee.module.scss";
 
 /** Infinite scrolling strip of specializations (pauses on hover). */
 export default function Marquee() {
@@ -6,7 +7,7 @@ export default function Marquee() {
   return (
     <section
       aria-label="Areas of specialization"
-      className="overflow-hidden border-y border-white/5 bg-navy py-4"
+      className={`${styles.root} overflow-hidden py-4`}
     >
       <div className="group flex">
         <div className="flex shrink-0 animate-marquee items-center gap-12 pr-12 group-hover:[animation-play-state:paused]">

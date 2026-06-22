@@ -1,4 +1,4 @@
-import { Poppins, Inter, Dancing_Script } from "next/font/google";
+import { Poppins, Inter, Dancing_Script, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -19,6 +19,14 @@ const script = Dancing_Script({
   subsets: ["latin"],
   weight: ["600", "700"],
   variable: "--font-script",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -49,7 +57,9 @@ export const metadata = {
     locale: "en_IN",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/sree-logo.svg",
+    shortcut: "/sree-logo.svg",
+    apple: "/sree-logo.svg",
   },
 };
 
@@ -61,7 +71,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${inter.variable} ${script.variable}`}
+      className={`${poppins.variable} ${inter.variable} ${script.variable} ${cormorant.variable}`}
     >
       <body>{children}</body>
     </html>

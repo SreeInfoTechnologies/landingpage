@@ -1,0 +1,6 @@
+// Marquee — navy band with hairline top/bottom borders.
+// The scrolling strip itself is animated with Tailwind in Marquee.jsx.
+.root {
+  background-color: #15233f;
+  border-block: 1px solid rgba(255, 255, 255, 0.05);
+}
