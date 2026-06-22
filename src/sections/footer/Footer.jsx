@@ -91,8 +91,8 @@ export default function Footer() {
             &copy; {year} {company.name}. All rights reserved.
           </span>
           <span className={styles.fbLinks}>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
           </span>
         </div>
       </div>

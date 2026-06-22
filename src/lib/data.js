@@ -6,6 +6,7 @@
 
 export const company = {
   name: "Sree Info Technologies Pvt Ltd",
+  legalName: "Sree Info Technologies Private Limited",
   shortName: "Sree Info",
   tagline: "Consult. Outsource. Grow.",
   motto: "Driven by Values, Focused on Results.",
@@ -15,6 +16,39 @@ export const company = {
   pitch:
     "Empowering businesses through innovative consulting, outsourcing, marketing, and technology solutions.",
   slogan: "Success and Growth Through Innovation, Integrity, and Excellence.",
+
+  // Canonical identity / NAP — keep these consistent everywhere (used in JSON-LD + metadata).
+  url: "https://sreeinfotechnologies.com",
+  email: "support@sreeinfotechnologies.com",
+  phone: "+91 90444 48837",
+  phoneE164: "+919044448837",
+  address: {
+    locality: "Ananthapur",
+    region: "Andhra Pradesh",
+    country: "India",
+    countryCode: "IN",
+  },
+  // TODO: fill in the company's public social profile URLs — these become
+  // Organization.sameAs in JSON-LD and strongly help Google/AI link the entity.
+  social: {
+    linkedin: "",
+    twitter: "",
+    facebook: "",
+    instagram: "",
+  },
+};
+
+// Founder / leadership — modelled as a first-class Person entity so search engines
+// and AI assistants reliably answer "who is the CEO/founder of Sree Info Technologies".
+export const founder = {
+  name: "Medimi Sainath Reddy",
+  jobTitle: "Founder & CEO",
+  email: "sainathreddy@sreeinfotechnologies.com",
+  image: "/Sainathreddy.png",
+  bio:
+    "Medimi Sainath Reddy is the Founder and CEO of Sree Info Technologies Pvt Ltd. He leads the company's vision of helping businesses consult, outsource and grow — bringing consulting, outsourcing, technology and marketing together under one accountable team, driven by values and focused on measurable results.",
+  // TODO: add Sainath's public profile URLs (LinkedIn, X, etc.) → Person.sameAs.
+  sameAs: [],
 };
 
 // Multi-page navigation — each tab is its own route.
@@ -184,8 +218,16 @@ export const stats = [
 export const contact = {
   items: [
     { icon: "MapPin", label: "Ananthapur, Andhra Pradesh", href: null },
-    { icon: "Phone", label: "+91 XXXXX XXXXX", href: "tel:+91" },
-    { icon: "Mail", label: "info@sreeinfotech.com", href: "mailto:info@sreeinfotech.com" },
-    { icon: "Globe", label: "www.sreeinfotech.com", href: "https://www.sreeinfotech.com" },
+    { icon: "Phone", label: "+91 90444 48837", href: "tel:+919044448837" },
+    {
+      icon: "Mail",
+      label: "support@sreeinfotechnologies.com",
+      href: "mailto:support@sreeinfotechnologies.com",
+    },
+    {
+      icon: "Globe",
+      label: "sreeinfotechnologies.com",
+      href: "https://sreeinfotechnologies.com",
+    },
   ],
 };
