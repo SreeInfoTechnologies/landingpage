@@ -17,14 +17,14 @@ export const company = {
   slogan: "Success and Growth Through Innovation, Integrity, and Excellence.",
 };
 
+// Multi-page navigation — each tab is its own route.
 export const nav = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why" },
-  { label: "Payroll", href: "#payroll" },
-  { label: "Careers", href: "#careers" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Why Us", href: "/why-us" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 // Three headline pillars (from the brochure)

@@ -1,5 +1,174 @@
-// Why Choose Us — plain white section.
-// Feature cards are styled with Tailwind in WhyChooseUs.jsx.
-.root {
-  background-color: #ffffff;
+// Why Choose Us — dark luxe section, ported from the brand reference.
+// Palette: ink #0A1020 · paper #F1F3F8 · muted #9AA5B9 · gold #CBA85F · gold-soft #E4CF99
+//          line rgba(255,255,255,.10) · line-g rgba(203,168,95,.28)
+// NOTE: mid-page section — no fixed-nav top offset (the navbar only overlaps the hero).
+
+.why {
+  position: relative;
+  padding: calc(58px + clamp(44px, 8vh, 96px)) 0 clamp(66px, 11vh, 120px);
+  background: radial-gradient(60% 50% at 80% 0%, rgba(203, 168, 95, 0.06), transparent 60%),
+    linear-gradient(180deg, #0a1224, #080d18);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(203, 168, 95, 0.28), transparent);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) 1.35fr;
+  gap: clamp(38px, 5vw, 76px);
+  align-items: start;
+}
+
+// ---------- intro column ----------
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cba85f;
+  font-weight: 600;
+  margin-bottom: 18px;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #cba85f;
+    opacity: 0.6;
+  }
+}
+
+.heading {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: 0.3px;
+  color: #f1f3f8;
+
+  em {
+    font-style: italic;
+    color: #e4cf99;
+  }
+}
+
+.sub {
+  color: #9aa5b9;
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  line-height: 1.7;
+  margin-top: 20px;
+  max-width: 46ch;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f3f8;
+  text-decoration: none;
+  border: 1px solid rgba(203, 168, 95, 0.28);
+  border-radius: 999px;
+  padding: 13px 26px;
+  margin-top: 28px;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    border-color: #cba85f;
+    background: rgba(203, 168, 95, 0.06);
+    transform: translateY(-1px);
+  }
+}
+
+.motto {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-size: 1.18rem;
+  color: #e4cf99;
+  margin-top: 30px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(203, 168, 95, 0.28);
+  opacity: 0.92;
+}
+
+// ---------- reasons grid ----------
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.cell {
+  height: 100%;
+}
+.row {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  background: linear-gradient(180deg, #0f1830, #0b1426);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(203, 168, 95, 0.28);
+    box-shadow: 0 24px 52px -30px rgba(0, 0, 0, 0.6);
+  }
+  &:hover .ic {
+    transform: scale(1.07);
+    color: #f4e4bc;
+  }
+
+  h4 {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #f1f3f8;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 12.5px;
+    color: #9aa5b9;
+    line-height: 1.55;
+  }
+}
+.ic {
+  flex: 0 0 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 32% 28%, #1b2a48, #0c1322);
+  border: 1px solid rgba(203, 168, 95, 0.28);
+  color: #e4cf99;
+  transition: transform 0.3s, color 0.3s;
+}
+
+// ---------- responsive ----------
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+@media (max-width: 560px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
 }

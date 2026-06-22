@@ -10,11 +10,14 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+    scroll-padding-top: 64px;
   }
 
   body {
     @apply bg-white font-body text-ink antialiased;
+    /* `clip` stops sideways scroll WITHOUT making <body> a scroll container
+       (which would break window-scroll + whileInView reveals). */
+    overflow-x: clip;
   }
 
   ::selection {
@@ -29,11 +32,11 @@
 
 @layer components {
   .container-x {
-    @apply mx-auto w-full max-w-[1180px] px-5 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-6 lg:px-8;
   }
 
   .section {
-    @apply py-20 md:py-28;
+    @apply py-16 sm:py-20 md:py-28;
   }
 
   .badge {

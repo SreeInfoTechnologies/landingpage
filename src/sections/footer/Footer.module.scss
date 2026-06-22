@@ -1,5 +1,135 @@
-// Footer — deep navy background.
-// Columns and links are styled with Tailwind in Footer.jsx.
-.root {
-  background-color: #0c1426;
+// Footer — dark luxe, ported from the brand reference.
+.foot {
+  background: #070b14;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: clamp(56px, 8vh, 84px) 0 28px;
+  color: #9aa5b9;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.1fr;
+  gap: clamp(28px, 4vw, 56px);
+
+  h4 {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #cba85f;
+    margin-bottom: 16px;
+  }
+}
+.desc {
+  color: #9aa5b9;
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin-top: 18px;
+  max-width: 34ch;
+}
+.motto {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  color: #e4cf99;
+  font-size: 1.05rem;
+  margin-top: 16px;
+}
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+
+  a {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #9aa5b9;
+    transition: color 0.25s, border-color 0.25s, transform 0.2s;
+
+    &:hover {
+      color: #e4cf99;
+      border-color: rgba(203, 168, 95, 0.28);
+      transform: translateY(-2px);
+    }
+  }
+}
+.fl {
+  display: block;
+  color: #9aa5b9;
+  text-decoration: none;
+  font-size: 13.5px;
+  padding: 7px 0;
+  transition: color 0.2s, padding-left 0.2s;
+
+  &:hover {
+    color: #f1f3f8;
+    padding-left: 4px;
+  }
+}
+.fcontact {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #9aa5b9;
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding: 7px 0;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #cba85f;
+  }
+
+  a {
+    color: #9aa5b9;
+    text-decoration: none;
+    word-break: break-word;
+
+    &:hover {
+      color: #e4cf99;
+    }
+  }
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(40px, 6vh, 60px);
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12.5px;
+  color: #9aa5b9;
+
+  a {
+    color: #9aa5b9;
+    text-decoration: none;
+
+    &:hover {
+      color: #e4cf99;
+    }
+  }
+}
+.fbLinks {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom {
+    justify-content: flex-start;
+  }
 }

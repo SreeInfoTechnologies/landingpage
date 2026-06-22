@@ -1,0 +1,97 @@
+// Floating toast — dark luxe, gold-accented to match the brand.
+// Palette: gold #CBA85F · gold-soft #E4CF99 · red #E07A6E · red-soft #E7A59C
+
+// Fixed full-width strip pinned to the bottom; centers the toast and lets
+// clicks pass through everywhere except the toast itself.
+.viewport {
+  position: fixed;
+  inset: auto 0 28px 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(420px, 100%);
+  padding: 14px 14px 14px 16px;
+  border-radius: 14px;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  box-shadow: 0 26px 60px -22px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+
+  // gold accent bar on the leading edge
+  &::before {
+    content: "";
+    align-self: stretch;
+    flex: 0 0 3px;
+    margin-right: 2px;
+    border-radius: 999px;
+  }
+}
+
+.success {
+  color: #f3ead1;
+  background: linear-gradient(180deg, rgba(36, 29, 14, 0.96), rgba(24, 19, 10, 0.96));
+  border: 1px solid rgba(203, 168, 95, 0.5);
+
+  &::before {
+    background: linear-gradient(180deg, #e4cf99, #cba85f);
+  }
+  .icon {
+    color: #cba85f;
+  }
+}
+
+.error {
+  color: #f3d8d3;
+  background: linear-gradient(180deg, rgba(40, 21, 19, 0.96), rgba(26, 14, 13, 0.96));
+  border: 1px solid rgba(224, 122, 110, 0.5);
+
+  &::before {
+    background: linear-gradient(180deg, #e7a59c, #e07a6e);
+  }
+  .icon {
+    color: #e07a6e;
+  }
+}
+
+.icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.msg {
+  flex: 1 1 auto;
+  font-size: 13.5px;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+}
+
+.close {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+  }
+}
