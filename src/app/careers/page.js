@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/sections/footer/Footer";
 import BackToTop from "@/components/back-to-top/BackToTop";
 import CareersPage from "./CareersPage";
+import JsonLd from "@/components/seo/JsonLd";
+import { webPageNode, breadcrumbNode } from "@/lib/schema";
 
 export const metadata = {
   title: "Careers",
@@ -18,6 +20,21 @@ export default function Page() {
       </main>
       <Footer />
       <BackToTop />
+
+      <JsonLd
+        data={webPageNode({
+          type: "CollectionPage",
+          path: "/careers/",
+          name: "Careers",
+          description: metadata.description,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbNode([
+          { name: "Home", path: "/" },
+          { name: "Careers", path: "/careers/" },
+        ])}
+      />
     </>
   );
 }

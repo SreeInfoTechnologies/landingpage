@@ -115,24 +115,28 @@ export const services = [
     icon: "Briefcase",
     category: "Consulting",
     title: "Consulting Services",
+    desc: "Strategic business and IT consulting that turns complex challenges into clear, executable plans.",
     items: ["Business Strategy", "Process Optimization", "IT Consulting", "Digital Transformation"],
   },
   {
     icon: "RefreshCw",
     category: "Outsourcing",
     title: "Outsourcing Services",
+    desc: "Scalable, reliable and cost-effective outsourcing and back-office operations, run end to end.",
     items: ["Payroll Management", "HR Outsourcing", "Back Office Support", "Recruitment Process Outsourcing"],
   },
   {
     icon: "Megaphone",
     category: "Marketing",
     title: "Marketing Services",
+    desc: "Creative digital marketing and branding strategies that build brands and drive measurable growth.",
     items: ["Digital Marketing", "Social Media Marketing", "SEO & SEM", "Branding Solutions"],
   },
   {
     icon: "Code2",
     category: "Technology",
     title: "Technology Services",
+    desc: "Custom software, web and cloud platforms engineered to scale with your business.",
     items: ["Software Development", "Web Development", "Cloud Solutions", "Application Support"],
   },
 ];

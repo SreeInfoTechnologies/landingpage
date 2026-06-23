@@ -1,5 +1,7 @@
 import Script from "next/script";
 import { Poppins, Inter, Dancing_Script, Cormorant_Garamond } from "next/font/google";
+import JsonLd from "@/components/seo/JsonLd";
+import { siteGraph } from "@/lib/schema";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -75,6 +77,9 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${inter.variable} ${script.variable} ${cormorant.variable}`}
     >
       <body>
+        {/* Site-wide entity graph: Organization + ProfessionalService + WebSite + founder Person */}
+        <JsonLd data={siteGraph()} />
+
         {children}
 
         {/* Microsoft Clarity — analytics / session insights */}

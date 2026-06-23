@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/sections/footer/Footer";
 import BackToTop from "@/components/back-to-top/BackToTop";
 import ServicesPage from "./ServicesPage";
+import JsonLd from "@/components/seo/JsonLd";
+import { webPageNode, breadcrumbNode, servicesGraph } from "@/lib/schema";
 
 export const metadata = {
   title: "Services",
@@ -18,6 +20,22 @@ export default function Page() {
       </main>
       <Footer />
       <BackToTop />
+
+      <JsonLd data={servicesGraph()} />
+      <JsonLd
+        data={webPageNode({
+          type: "CollectionPage",
+          path: "/services/",
+          name: "Services",
+          description: metadata.description,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbNode([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services/" },
+        ])}
+      />
     </>
   );
 }

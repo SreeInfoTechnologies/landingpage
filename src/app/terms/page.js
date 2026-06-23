@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/sections/footer/Footer";
 import BackToTop from "@/components/back-to-top/BackToTop";
 import LegalPage from "@/components/legal/LegalPage";
+import JsonLd from "@/components/seo/JsonLd";
+import { webPageNode, breadcrumbNode } from "@/lib/schema";
 import { company } from "@/lib/data";
 
 export const metadata = {
@@ -91,6 +93,21 @@ export default function TermsOfServicePage() {
       </main>
       <Footer />
       <BackToTop />
+
+      <JsonLd
+        data={webPageNode({
+          type: "TermsOfService",
+          path: "/terms/",
+          name: "Terms of Service",
+          description: metadata.description,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbNode([
+          { name: "Home", path: "/" },
+          { name: "Terms of Service", path: "/terms/" },
+        ])}
+      />
     </>
   );
 }

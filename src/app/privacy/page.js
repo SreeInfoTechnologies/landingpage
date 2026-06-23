@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/sections/footer/Footer";
 import BackToTop from "@/components/back-to-top/BackToTop";
 import LegalPage from "@/components/legal/LegalPage";
+import JsonLd from "@/components/seo/JsonLd";
+import { webPageNode, breadcrumbNode } from "@/lib/schema";
 import { company } from "@/lib/data";
 
 export const metadata = {
@@ -73,6 +75,21 @@ export default function PrivacyPolicyPage() {
       </main>
       <Footer />
       <BackToTop />
+
+      <JsonLd
+        data={webPageNode({
+          type: "PrivacyPolicy",
+          path: "/privacy/",
+          name: "Privacy Policy",
+          description: metadata.description,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbNode([
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy/" },
+        ])}
+      />
     </>
   );
 }
