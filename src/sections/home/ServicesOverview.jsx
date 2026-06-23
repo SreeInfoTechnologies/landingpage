@@ -21,8 +21,9 @@ export default function ServicesOverview() {
             Everything your business needs, <em>under one roof.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.sub}>
-            Four disciplines, one accountable partner — explore the full range on
-            our services page.
+            Consulting, outsourcing, marketing and technology, all handled by one
+            team. So you spend less time managing vendors and more time running
+            your business.
           </Reveal>
         </div>
 

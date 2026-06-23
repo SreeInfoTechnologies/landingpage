@@ -4,12 +4,14 @@ import BackToTop from "@/components/back-to-top/BackToTop";
 import ContactPage from "./ContactPage";
 import JsonLd from "@/components/seo/JsonLd";
 import { webPageNode, breadcrumbNode } from "@/lib/schema";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Contact",
   description:
     "Get in touch with Sree Info Technologies Pvt Ltd — let's build success together through consulting, outsourcing, technology and marketing.",
-};
+  path: "/contact/",
+});
 
 export default function Page() {
   return (

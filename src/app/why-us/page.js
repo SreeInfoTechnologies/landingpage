@@ -5,12 +5,14 @@ import WhyChooseUs from "@/sections/why-choose-us/WhyChooseUs";
 import WhyCTA from "./WhyCTA";
 import JsonLd from "@/components/seo/JsonLd";
 import { webPageNode, breadcrumbNode } from "@/lib/schema";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Why Us",
   description:
     "Why choose Sree Info Technologies — an end-to-end, values-first partner bringing consulting, outsourcing, technology and marketing together under one accountable team.",
-};
+  path: "/why-us/",
+});
 
 export default function WhyUsPage() {
   return (

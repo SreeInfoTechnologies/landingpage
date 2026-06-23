@@ -8,6 +8,13 @@ import AboutTeaser from "@/sections/home/AboutTeaser";
 import FinalCTA from "@/sections/home/FinalCTA";
 import Footer from "@/sections/footer/Footer";
 import BackToTop from "@/components/back-to-top/BackToTop";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta({
+  description:
+    "Sree Info Technologies Pvt Ltd helps businesses consult, outsource and grow — consulting, outsourcing, marketing and technology from one team in Ananthapur, Andhra Pradesh.",
+  path: "/",
+});
 
 export default function Home() {
   return (

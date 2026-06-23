@@ -4,13 +4,15 @@ import BackToTop from "@/components/back-to-top/BackToTop";
 import LegalPage from "@/components/legal/LegalPage";
 import JsonLd from "@/components/seo/JsonLd";
 import { webPageNode, breadcrumbNode } from "@/lib/schema";
+import { pageMeta } from "@/lib/seo";
 import { company } from "@/lib/data";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Privacy Policy",
   description:
     "How Sree Info Technologies Pvt Ltd collects, uses, and protects your personal information.",
-};
+  path: "/privacy/",
+});
 
 const SECTIONS = [
   {
