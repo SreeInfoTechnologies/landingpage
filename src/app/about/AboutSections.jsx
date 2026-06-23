@@ -140,7 +140,7 @@ export default function AboutSections() {
             </Reveal>
 
             <Reveal delay={0.28}>
-              <a className={styles.cta} href={`mailto:${founder.email}`}>
+              <a className={styles.cta} href="/sainath/">
                 Connect with Sainath →
               </a>
             </Reveal>

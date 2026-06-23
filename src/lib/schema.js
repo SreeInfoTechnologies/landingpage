@@ -11,7 +11,7 @@
  * Entities are linked by @id so the graph cross-references instead of
  * duplicating: #organization, #website, #founder.
  */
-import { company, founder, services, specializations } from "@/lib/data";
+import { company, founder, founderProfile, services, specializations } from "@/lib/data";
 
 const BASE = company.url; // https://sreeinfotechnologies.com
 export const ORG_ID = `${BASE}/#organization`;
@@ -92,6 +92,39 @@ export function founderNode() {
   };
   if (founder.sameAs?.length) node.sameAs = founder.sameAs;
   return node;
+}
+
+/**
+ * ProfilePage graph for /sainath — an enriched founder Person (same @id, so the
+ * graph merges with the site-wide node) plus the ProfilePage that frames it.
+ * Adds only CV-verified facts: alumniOf, knowsAbout (skills), and occupation.
+ */
+export function profileGraph(path = "/sainath/") {
+  const knowsAbout = [
+    ...new Set(founderProfile.skills.flatMap((g) => g.items)),
+  ];
+  const person = {
+    ...founderNode(),
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: founderProfile.education.school,
+    },
+    knowsAbout,
+    knowsLanguage: founderProfile.languages,
+  };
+  const profilePage = {
+    "@type": "ProfilePage",
+    "@id": `${BASE}${path}#webpage`,
+    url: abs(path),
+    name: `${founder.name} — ${founder.jobTitle}`,
+    description: founderProfile.summary,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": FOUNDER_ID },
+    mainEntity: { "@id": FOUNDER_ID },
+    inLanguage: "en-IN",
+    primaryImageOfPage: { "@type": "ImageObject", url: abs(founder.image) },
+  };
+  return { "@context": "https://schema.org", "@graph": [person, profilePage] };
 }
 
 /** The global graph emitted once site-wide (in the root layout). */

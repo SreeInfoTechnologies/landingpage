@@ -57,6 +57,133 @@ export const founder = {
   sameAs: [],
 };
 
+// Extended profile / portfolio for the /sainath page. Kept separate from the
+// lean `founder` object (used on the About page + JSON-LD) so this richer,
+// resume-sourced detail lives in one place. Everything here is drawn strictly
+// from Sainath's CV — nothing fabricated.
+export const founderProfile = {
+  // Where he is based today (career has been Bangalore-based).
+  location: "Bangalore, India",
+  experienceYears: "4.5+",
+  // Short professional positioning line for the profile hero.
+  summary:
+    "Cloud engineer turned founder. 4.5+ years architecting and running Microsoft Azure infrastructure for global enterprises — now leading Sree Info Technologies as a hands-on Founder & Director.",
+  // Headline numbers shown as the hero stat strip.
+  stats: [
+    { value: "4.5+", label: "Years in cloud" },
+    { value: "Azure", label: "Core platform" },
+    { value: "IaaS · PaaS", label: "Service models" },
+    { value: "2", label: "Global firms" },
+  ],
+  // Leadership focus areas at Sree Info Technologies.
+  leadership: [
+    {
+      icon: "Compass",
+      title: "Strategy & Vision",
+      desc: "Sets the direction for the company and keeps every engagement pointed at real client outcomes.",
+    },
+    {
+      icon: "Handshake",
+      title: "Client Partnerships",
+      desc: "Stays close to clients, building long-term relationships founded on honest, dependable work.",
+    },
+    {
+      icon: "Layers",
+      title: "Technology & Delivery",
+      desc: "Brings deep cloud and infrastructure experience to how the team designs, builds and ships.",
+    },
+  ],
+  // Career timeline — most recent first. Faithful to the CV.
+  experience: [
+    {
+      role: "Founder & Director",
+      org: "Sree Info Technologies Pvt Ltd",
+      location: "Ananthapur, Andhra Pradesh",
+      period: "Present",
+      current: true,
+      points: [
+        "Founded and leads the company across consulting, outsourcing, technology and marketing.",
+        "Owns strategy and vision, nurtures client partnerships, and guides technology and delivery end to end.",
+        "Keeps the work honest and close to clients, measuring success by the results they actually see.",
+      ],
+    },
+    {
+      role: "Azure Administrator",
+      org: "Accenture",
+      location: "Bangalore",
+      period: "Apr 2025 – Present",
+      points: [
+        "Provisions and manages Windows and Linux virtual machines around evolving business needs.",
+        "Builds VNets, storage accounts, availability sets and load-balanced endpoints; creates and upgrades AKS (Kubernetes) clusters.",
+        "Establishes Site-to-Site, Point-to-Site VPN and ExpressRoute connectivity between on-premises and Azure.",
+        "Runs Recovery Services Vault backups, restores and ASR; resolves Prisma alerts via NSG flow logs and NSG troubleshooting.",
+      ],
+    },
+    {
+      role: "Azure Cloud Engineer",
+      org: "IBM",
+      location: "Bangalore",
+      period: "Aug 2021 – Dec 2024",
+      points: [
+        "Managed Azure VMs, VNets, NSGs and storage accounts, and administered user access.",
+        "Configured Microsoft Entra ID (Azure AD) users, groups, roles and RBAC permissions.",
+        "Monitored performance and availability with Azure Monitor, Log Analytics and alerts.",
+        "Implemented backup and disaster recovery with Azure Backup and Azure Site Recovery, plus routine patching and incident resolution.",
+      ],
+    },
+  ],
+  // Grouped technical expertise (icon names map to lucide-react in the page).
+  skills: [
+    {
+      icon: "Cloud",
+      title: "Cloud Platform",
+      items: ["Microsoft Azure", "IaaS · PaaS · SaaS", "Azure Cloud Services"],
+    },
+    {
+      icon: "Boxes",
+      title: "Compute & Containers",
+      items: ["Windows & Linux VMs", "Azure Kubernetes (AKS)", "Availability Sets & Zones", "IIS Hosting"],
+    },
+    {
+      icon: "Network",
+      title: "Networking",
+      items: ["VNet, Subnet & NSG", "Azure Firewall & Load Balancer", "S2S / P2S VPN", "ExpressRoute & Private Endpoints"],
+    },
+    {
+      icon: "Database",
+      title: "Storage & Data",
+      items: ["Blob, File, Queue, Table", "LRS · ZRS · GRS · RA-GRS", "Azure SQL & SQL Server"],
+    },
+    {
+      icon: "ShieldCheck",
+      title: "Identity & Security",
+      items: ["Microsoft Entra ID (Azure AD)", "RBAC & IAM", "Prisma & NSG Flow Logs"],
+    },
+    {
+      icon: "DatabaseBackup",
+      title: "Backup & DR",
+      items: ["Azure Backup", "Recovery Services Vault", "Azure Site Recovery (ASR)"],
+    },
+    {
+      icon: "TerminalSquare",
+      title: "Automation & IaC",
+      items: ["PowerShell", "Terraform", "ARM / JSON Templates", "Azure Automation"],
+    },
+    {
+      icon: "Activity",
+      title: "Monitoring & Ops",
+      items: ["Azure Monitor & Log Analytics", "Azure Update Manager", "PRTG", "Cost Management & Budgets"],
+    },
+  ],
+  tools: ["JIRA", "ServiceNow", "Azure DevOps", "PowerShell", "Terraform", "Windows Server"],
+  education: {
+    degree: "Bachelor's Degree (Under Graduation)",
+    school: "Asian Institute of Technology, Chennai",
+    year: "2021",
+  },
+  languages: ["English", "Telugu", "Kannada"],
+};
+
 // Multi-page navigation — each tab is its own route.
 export const nav = [
   { label: "Home", href: "/" },
