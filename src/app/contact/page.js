@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Contact",
   description:
-    "Get in touch with Sree Info Technologies Pvt Ltd — let's build success together through consulting, outsourcing, technology and marketing.",
+    "Get in touch with Sree Info Technologies. Let's talk about how consulting, outsourcing, technology and marketing can help your business grow.",
   path: "/contact/",
 });
 

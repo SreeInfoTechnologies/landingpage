@@ -18,7 +18,7 @@ const SECTIONS = [
   {
     h: "Information We Collect",
     p: [
-      "When you contact us through our website forms, we collect the details you choose to provide — typically your name, email address, subject, and message.",
+      "When you contact us through our website forms, we collect the details you choose to provide, typically your name, email address, subject, and message.",
       "We may also collect limited technical information automatically, such as your browser type, device, and general usage data, to help us understand how the site is used and to improve it.",
     ],
   },

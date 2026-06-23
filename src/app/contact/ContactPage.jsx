@@ -87,8 +87,9 @@ export default function ContactPage() {
             Let&apos;s build success <em>together.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.lead}>
-            Tell us where you want to go — and let&apos;s talk about how
-            consulting, outsourcing, technology and marketing can get you there.
+            Tell us a bit about what you&apos;re working on, and we&apos;ll
+            figure out how consulting, outsourcing, technology or marketing can
+            help.
           </Reveal>
         </div>
       </section>
@@ -216,7 +217,7 @@ export default function ContactPage() {
         message={
           status === "error"
             ? "Couldn't send your message. Please try again or email us directly."
-            : "Message sent — thank you! We'll be in touch shortly."
+            : "Thanks! Your message is on its way. We'll get back to you soon."
         }
         onClose={closeToast}
       />

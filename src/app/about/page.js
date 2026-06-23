@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "About",
   description:
-    "Sree Info Technologies Pvt Ltd — a fast-growing consulting and outsourcing partner bringing consulting, outsourcing, technology and marketing together under one roof.",
+    "Sree Info Technologies is a growing consulting and outsourcing company, bringing consulting, outsourcing, technology and marketing together in one place.",
   path: "/about/",
 });
 

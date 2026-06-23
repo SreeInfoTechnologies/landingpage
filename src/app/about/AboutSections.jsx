@@ -1,18 +1,18 @@
 import { Compass, Users, TrendingUp, Eye, Target } from "lucide-react";
-import { company } from "@/lib/data";
+import { company, founder } from "@/lib/data";
 import Reveal, { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import styles from "./about.module.scss";
 
 // Consult → Outsource → Grow.
 const STEPS = [
-  { num: "01", icon: Compass, title: "Consult", desc: "We dig into your goals, challenges and data to shape a clear, practical strategy." },
-  { num: "02", icon: Users, title: "Outsource", desc: "We take on the operations — payroll, HR, back-office and more — so your team stays focused." },
-  { num: "03", icon: TrendingUp, title: "Grow", desc: "We build the technology and marketing that turn strategy into measurable growth." },
+  { num: "01", icon: Compass, title: "Consult", desc: "We get to know your goals and challenges, then build a plan that fits." },
+  { num: "02", icon: Users, title: "Outsource", desc: "We handle the operations like payroll, HR and back-office, so your team can focus." },
+  { num: "03", icon: TrendingUp, title: "Grow", desc: "We build the technology and marketing that turn the plan into real growth." },
 ];
 
 const VM = [
-  { icon: Eye, tag: "Our vision", title: "The growth partner businesses trust.", desc: "To be the partner organizations across industries turn to for growth — recognised for innovation, integrity, and the measurable results we help create." },
-  { icon: Target, tag: "Our mission", title: "Strategy, execution and lasting value.", desc: "To help organizations consult, outsource and grow with confidence — pairing practical strategy with dependable execution and technology built to last." },
+  { icon: Eye, tag: "Our vision", title: "The partner businesses trust to grow.", desc: "To be the company businesses turn to when they want to grow, known for honest work that actually moves the needle." },
+  { icon: Target, tag: "Our mission", title: "Plan it, build it, and stick around.", desc: "To help businesses consult, outsource and grow with confidence, backed by solid planning, dependable delivery and technology that lasts." },
 ];
 
 export default function AboutSections() {
@@ -28,9 +28,9 @@ export default function AboutSections() {
             Your partner in <em>success.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.lead}>
-            {company.name} is a fast-growing consulting and outsourcing company —
-            helping businesses improve efficiency, reduce costs and accelerate
-            growth through innovation, integrity and excellence.
+            {company.name} is a growing consulting and outsourcing company. We
+            help businesses work smarter, spend less and grow, and we try to do
+            it honestly and well.
           </Reveal>
         </div>
       </section>
@@ -45,14 +45,13 @@ export default function AboutSections() {
             <Reveal as="p" delay={0.05} className={styles.text}>
               We bring{" "}
               <strong>consulting, outsourcing, technology and marketing</strong>{" "}
-              together under one roof — so businesses can solve complex problems
-              with a single, accountable partner instead of juggling vendors.
+              together in one place, so you can solve big problems with one team
+              you trust instead of juggling a handful of vendors.
             </Reveal>
             <Reveal as="p" delay={0.1} className={styles.text}>
-              We&apos;re driven by a simple belief: lasting success comes from
-              innovation, integrity and excellence applied consistently. Every
-              engagement is measured by the outcomes we create for the people we
-              work with — not the hours we bill.
+              We believe good work speaks for itself. So we keep things honest,
+              do them well, and measure our success by what our clients achieve,
+              not the hours on an invoice.
             </Reveal>
             <Reveal delay={0.15}>
               <a className={styles.cta} href="/#contact">
@@ -94,6 +93,61 @@ export default function AboutSections() {
         </div>
       </section>
 
+      {/* ---------- founder / leadership ---------- */}
+      <section className={`${styles.leader} ${styles.hairline}`} id="founder">
+        <div className={`container-x ${styles.leaderGrid}`}>
+          <Reveal className={styles.portraitWrap}>
+            <figure className={styles.portrait}>
+              <img
+                src={founder.image}
+                alt={`${founder.name}, ${founder.jobTitle} of ${company.name}`}
+                loading="lazy"
+              />
+              <figcaption className={styles.badge}>
+                <span className={styles.badgeName}>{founder.name}</span>
+                <span className={styles.badgeRole}>{founder.jobTitle}</span>
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <div>
+            <Reveal as="p" className={styles.eyebrow}>
+              Leadership
+            </Reveal>
+            <Reveal as="h2" delay={0.05} className={styles.heading}>
+              Meet our <em>founder.</em>
+            </Reveal>
+            <Reveal as="p" delay={0.1} className={styles.leaderRole}>
+              {founder.name} · {founder.jobTitle}
+            </Reveal>
+            <Reveal as="p" delay={0.12} className={styles.text}>
+              {founder.bio}
+            </Reveal>
+            <Reveal as="p" delay={0.16} className={styles.text}>
+              {founder.note}
+            </Reveal>
+
+            <Reveal delay={0.2} className={styles.focusRow}>
+              {founder.focus.map((f) => (
+                <span key={f} className={styles.chip}>
+                  {f}
+                </span>
+              ))}
+            </Reveal>
+
+            <Reveal as="blockquote" delay={0.24} className={styles.quote}>
+              &ldquo;{founder.quote}&rdquo;
+            </Reveal>
+
+            <Reveal delay={0.28}>
+              <a className={styles.cta} href={`mailto:${founder.email}`}>
+                Connect with Sainath →
+              </a>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* ---------- approach ---------- */}
       <section className={`${styles.steps} ${styles.hairline}`}>
         <div className="container-x">
@@ -104,8 +158,8 @@ export default function AboutSections() {
             Consult. Outsource. <em>Grow.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.sub}>
-            Three simple moves that take you from where you are to where you want
-            to be — with one team accountable the whole way.
+            Three simple steps that take you from where you are now to where you
+            want to be, with one team alongside you the whole way.
           </Reveal>
 
           <Stagger className={styles.stepsGrid} stagger={0.1}>
@@ -150,8 +204,8 @@ export default function AboutSections() {
               Let&apos;s build your <em>next chapter.</em>
             </h2>
             <p>
-              Tell us where you&apos;re headed — we&apos;ll map a clear,
-              practical way to get there.
+              Tell us where you want to take your business, and we&apos;ll help
+              you get there.
             </p>
             <div className={styles.ctaRow}>
               <a className={styles.btnGold} href="/contact">

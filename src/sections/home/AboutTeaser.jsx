@@ -3,9 +3,9 @@ import Reveal, { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import styles from "./home.module.scss";
 
 const TRIO = [
-  { n: "01", icon: Compass, title: "Consult", desc: "Strategy shaped around your goals and data." },
-  { n: "02", icon: Users, title: "Outsource", desc: "Operations handled, so your team stays focused." },
-  { n: "03", icon: TrendingUp, title: "Grow", desc: "Technology and marketing that scale results." },
+  { n: "01", icon: Compass, title: "Consult", desc: "We learn your goals, then build a plan around them." },
+  { n: "02", icon: Users, title: "Outsource", desc: "We take the busywork so your team can focus." },
+  { n: "03", icon: TrendingUp, title: "Grow", desc: "Tech and marketing that help you grow." },
 ];
 
 export default function AboutTeaser() {
@@ -17,11 +17,11 @@ export default function AboutTeaser() {
             About us
           </Reveal>
           <Reveal as="h2" delay={0.05} className={styles.heading}>
-            More than a vendor — a <em>growth partner.</em>
+            We&apos;d rather be a partner than a <em>vendor.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.sub}>
-            We bring consulting, outsourcing, technology and marketing under one
-            roof — guided by values and focused on results.
+            We bring consulting, outsourcing, technology and marketing together,
+            so you've got one team to count on instead of many.
           </Reveal>
           <Reveal delay={0.15}>
             <a className={styles.abtCta} href="/about">

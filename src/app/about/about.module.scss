@@ -190,6 +190,108 @@
   }
 }
 
+// ---------- founder / leadership ----------
+.leader {
+  padding: clamp(56px, 9vh, 104px) 0;
+  background: linear-gradient(180deg, #0a1326, #0a1224);
+}
+.leaderGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+.portraitWrap {
+  position: relative;
+}
+.portrait {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(203, 168, 95, 0.28);
+  background: linear-gradient(180deg, #111d38, #0b1426);
+  box-shadow: 0 40px 90px -42px rgba(0, 0, 0, 0.72);
+
+  // soft gold glow over the portrait
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(72% 40% at 50% 0%, rgba(203, 168, 95, 0.16), transparent 60%);
+    pointer-events: none;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+.badge {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(8, 13, 24, 0.5), rgba(8, 13, 24, 0.85));
+  backdrop-filter: blur(8px);
+}
+.badgeName {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  color: #f1f3f8;
+}
+.badgeRole {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cba85f;
+}
+.leaderRole {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cba85f;
+  margin: 16px 0 18px;
+}
+.focusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 26px;
+}
+.chip {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 12px;
+  color: #ccd5e6;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 168, 95, 0.28);
+  background: rgba(203, 168, 95, 0.05);
+}
+.quote {
+  margin: 0 0 28px;
+  padding: 4px 0 4px 22px;
+  border-left: 2px solid rgba(203, 168, 95, 0.5);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.5;
+  color: #e4cf99;
+}
+
 // ---------- approach ----------
 .steps {
   padding: clamp(56px, 9vh, 104px) 0;
@@ -424,6 +526,13 @@
   }
   .facts {
     position: static;
+  }
+  .leaderGrid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .portraitWrap {
+    max-width: 420px;
   }
   .stepsGrid,
   .vmGrid {

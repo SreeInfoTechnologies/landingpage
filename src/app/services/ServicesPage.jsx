@@ -11,48 +11,48 @@ const META = {
     icon: Briefcase,
     id: "consulting",
     tagline: "Strategy & advisory",
-    desc: "Strategic solutions to your most complex business challenges — from high-level strategy to hands-on transformation.",
+    desc: "Help with the big calls and the day-to-day, from setting direction to actually making the change happen.",
     offerings: [
-      { title: "Business Strategy", desc: "Roadmaps, market analysis and decision frameworks that align every move with your goals." },
-      { title: "Process Optimization", desc: "Streamline workflows and remove bottlenecks to cut cost and lift productivity." },
-      { title: "IT Consulting", desc: "Right-size your technology stack and architecture for today and what comes next." },
-      { title: "Digital Transformation", desc: "Modernise legacy systems and ways of working into agile, digital-first operations." },
+      { title: "Business Strategy", desc: "Roadmaps, market research and clear thinking to back the decisions that matter." },
+      { title: "Process Optimization", desc: "We find what's slowing you down and fix it, so work gets done faster and for less." },
+      { title: "IT Consulting", desc: "The right tech for where you are now and where you're headed. No more, no less." },
+      { title: "Digital Transformation", desc: "Move old systems and habits into something faster and built for today." },
     ],
   },
   Outsourcing: {
     icon: RefreshCw,
     id: "outsourcing",
     tagline: "Operations & people",
-    desc: "Scalable, reliable and cost-effective operations, so your team can stay focused on the work that matters most.",
+    desc: "Dependable, cost-effective support for the everyday operations, so your team can focus on the work that matters.",
     offerings: [
-      { title: "Payroll Management", desc: "Accurate, compliant salary processing, payslips and statutory filings handled end to end." },
-      { title: "HR Outsourcing", desc: "Onboarding, records and the full employee lifecycle managed by a dedicated team." },
-      { title: "Back Office Support", desc: "Data, documentation and admin operations run reliably behind the scenes." },
-      { title: "Recruitment Process Outsourcing", desc: "Source, screen and place the right talent faster, at a lower cost per hire." },
+      { title: "Payroll Management", desc: "Salaries, payslips and statutory filings, done accurately and on time." },
+      { title: "HR Outsourcing", desc: "Onboarding, records and everything in between, handled by a team that knows your people." },
+      { title: "Back Office Support", desc: "The data, paperwork and admin that keep things running, handled quietly in the background." },
+      { title: "Recruitment Process Outsourcing", desc: "We find, screen and place the right people, faster and for less per hire." },
     ],
   },
   Marketing: {
     icon: Megaphone,
     id: "marketing",
     tagline: "Brand & growth",
-    desc: "Creative, data-driven strategies that build memorable brands and turn attention into measurable growth.",
+    desc: "Creative work backed by data, to get your brand noticed and turn that attention into customers.",
     offerings: [
-      { title: "Digital Marketing", desc: "Full-funnel campaigns across search, social and display, built to convert." },
-      { title: "Social Media Marketing", desc: "Always-on content and community management that grows an engaged audience." },
-      { title: "SEO & SEM", desc: "Rank higher and capture intent with organic and paid search working together." },
-      { title: "Branding Solutions", desc: "Identity, messaging and design systems that make your brand unmistakable." },
+      { title: "Digital Marketing", desc: "Campaigns across search, social and display, built to actually bring in business." },
+      { title: "Social Media Marketing", desc: "Regular content and community management that builds an audience that cares." },
+      { title: "SEO & SEM", desc: "Show up when people are searching, with organic and paid search working together." },
+      { title: "Branding Solutions", desc: "Logos, messaging and design that make your brand easy to recognise and remember." },
     ],
   },
   Technology: {
     icon: Code2,
     id: "technology",
     tagline: "Software & cloud",
-    desc: "Software, web and cloud platforms engineered to scale with you and supported long after launch.",
+    desc: "Software, websites and cloud setups built to grow with you, and looked after long after launch.",
     offerings: [
-      { title: "Software Development", desc: "Custom applications engineered to your workflow and built to scale." },
-      { title: "Web Development", desc: "Fast, responsive and secure websites and portals with great UX." },
-      { title: "Cloud Solutions", desc: "Migration, infrastructure and DevOps across AWS, Azure and GCP." },
-      { title: "Application Support", desc: "Monitoring, maintenance and enhancements that keep systems running." },
+      { title: "Software Development", desc: "Custom apps built around how you actually work, ready to grow." },
+      { title: "Web Development", desc: "Fast, secure websites and portals that are easy and pleasant to use." },
+      { title: "Cloud Solutions", desc: "Migration, infrastructure and DevOps on AWS, Azure or GCP." },
+      { title: "Application Support", desc: "Monitoring, maintenance and updates that keep everything running smoothly." },
     ],
   },
 };
@@ -72,9 +72,9 @@ export default function ServicesPage() {
             Everything you need to <em>scale.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.lead}>
-            Consulting, outsourcing, marketing and technology under one roof — a
-            single accountable partner across every discipline your business
-            needs to move faster and grow with confidence.
+            Consulting, outsourcing, marketing and technology, all in one place.
+            One team to call for whatever your business needs to move faster and
+            grow.
           </Reveal>
 
           {/* quick jump nav across the service ids */}
@@ -152,8 +152,8 @@ export default function ServicesPage() {
               Ready to <em>get started?</em>
             </h2>
             <p>
-              Tell us where you want to go and we&apos;ll bring the strategy,
-              people and technology to get you there.
+              Tell us where you want to go, and we&apos;ll bring the people, the
+              plan and the tech to get you there.
             </p>
             <div className={styles.ctaRow}>
               <a className={styles.btnGold} href="/contact">

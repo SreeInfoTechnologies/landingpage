@@ -29,8 +29,8 @@ export default function Footer() {
           <div>
             <Logo variant="light" size={44} />
             <p className={styles.desc}>
-              Consulting, outsourcing, technology and marketing — brought together
-              to help your business grow.
+              Consulting, outsourcing, technology and marketing, all from one
+              team to help your business grow.
             </p>
             <p className={styles.motto}>{company.motto}</p>
             <div className={styles.social}>

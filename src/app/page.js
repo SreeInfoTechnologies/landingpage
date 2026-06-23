@@ -12,7 +12,7 @@ import { pageMeta } from "@/lib/seo";
 
 export const metadata = pageMeta({
   description:
-    "Sree Info Technologies Pvt Ltd helps businesses consult, outsource and grow — consulting, outsourcing, marketing and technology from one team in Ananthapur, Andhra Pradesh.",
+    "Sree Info Technologies helps businesses consult, outsource and grow. Consulting, outsourcing, marketing and technology from one team in Ananthapur, Andhra Pradesh.",
   path: "/",
 });
 

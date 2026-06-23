@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Services",
   description:
-    "Consulting, outsourcing, marketing and technology under one roof — explore the full range of services from Sree Info Technologies Pvt Ltd.",
+    "Consulting, outsourcing, marketing and technology, all in one place. Explore the full range of services from Sree Info Technologies.",
   path: "/services/",
 });
 

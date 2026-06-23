@@ -11,8 +11,8 @@ export default function FinalCTA() {
             Let&apos;s talk about your <em>growth.</em>
           </h2>
           <p>
-            Tell us where you&apos;re headed — we&apos;ll map a clear, practical
-            way to get there.
+            Tell us where you want to take your business, and we&apos;ll help
+            you get there.
           </p>
           <div className={styles.ctaRow}>
             <a className={styles.btnGold} href="/contact">

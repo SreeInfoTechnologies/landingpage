@@ -14,7 +14,7 @@ export const company = {
   buildLine: "Let's Build the Future Together",
   location: "Ananthapur, Andhra Pradesh",
   pitch:
-    "Empowering businesses through innovative consulting, outsourcing, marketing, and technology solutions.",
+    "We help businesses cut costs, work smarter and grow. Consulting, outsourcing, marketing and technology, all handled by one team you can actually reach.",
   slogan: "Success and Growth Through Innovation, Integrity, and Excellence.",
 
   // Canonical identity / NAP — keep these consistent everywhere (used in JSON-LD + metadata).
@@ -42,11 +42,17 @@ export const company = {
 // and AI assistants reliably answer "who is the CEO/founder of Sree Info Technologies".
 export const founder = {
   name: "Medimi Sainath Reddy",
-  jobTitle: "Founder & CEO",
+  jobTitle: "Founder & Director",
   email: "sainathreddy@sreeinfotechnologies.com",
   image: "/Sainathreddy.png",
   bio:
-    "Medimi Sainath Reddy is the Founder and CEO of Sree Info Technologies Pvt Ltd. He leads the company's vision of helping businesses consult, outsource and grow — bringing consulting, outsourcing, technology and marketing together under one accountable team, driven by values and focused on measurable results.",
+    "Medimi Sainath Reddy is the Founder and Director of Sree Info Technologies Pvt Ltd. He built the company on a simple belief: businesses grow fastest when they have one dependable partner across consulting, outsourcing, technology and marketing, instead of stitching together a dozen vendors. Under his leadership the company stays close to its clients, keeps its work honest, and measures success by the results clients actually see.",
+  // Warmer, human note shown beneath the bio on the about page.
+  note:
+    "Hands-on by nature, Sainath works alongside both the team and clients, shaping strategy, guiding delivery, and making sure every engagement leaves a business stronger than it started.",
+  quote:
+    "We don't measure success by the hours on an invoice. We measure it by what our clients achieve.",
+  focus: ["Strategy & Vision", "Client Partnerships", "Technology & Delivery"],
   // TODO: add Sainath's public profile URLs (LinkedIn, X, etc.) → Person.sameAs.
   sameAs: [],
 };
@@ -66,35 +72,35 @@ export const pillars = [
   {
     icon: "Users",
     title: "Consulting",
-    desc: "Strategic solutions to solve complex business challenges.",
+    desc: "Practical advice that helps you solve the problems holding you back.",
   },
   {
     icon: "RefreshCw",
     title: "Outsourcing",
-    desc: "Scalable, reliable and cost-effective outsourcing services.",
+    desc: "Dependable teams that take work off your plate as you grow.",
   },
   {
     icon: "Megaphone",
     title: "Marketing",
-    desc: "Creative strategies that build brands and drive growth.",
+    desc: "Marketing that gets your brand noticed and brings in customers.",
   },
 ];
 
 // Core values
 export const values = [
-  { icon: "Target", title: "Client Focused", sub: "Customer success is our priority." },
-  { icon: "TrendingUp", title: "Result Driven", sub: "We deliver measurable outcomes." },
-  { icon: "Lightbulb", title: "Innovation Led", sub: "Continuous improvement and innovation." },
-  { icon: "Handshake", title: "Integrity First", sub: "Trust, transparency, and accountability." },
+  { icon: "Target", title: "Client Focused", sub: "Your success comes first." },
+  { icon: "TrendingUp", title: "Result Driven", sub: "We're here to get results, not bill hours." },
+  { icon: "Lightbulb", title: "Innovation Led", sub: "Always looking for a better way." },
+  { icon: "Handshake", title: "Integrity First", sub: "Honest, open and accountable." },
 ];
 
 export const visionMission = {
   vision:
-    "To become a trusted technology and business partner enabling organizations to achieve sustainable growth.",
+    "To be the partner businesses trust to help them grow, and keep growing.",
   mission:
-    "Deliver high-quality services, innovative solutions, and exceptional customer experiences that drive business success.",
+    "To do great work, solve the right problems, and treat every client like a long-term partner.",
   about:
-    "Sree Info Technologies Pvt Ltd is a fast-growing consulting and outsourcing company helping businesses improve efficiency, reduce costs, and accelerate growth.",
+    "Sree Info Technologies is a growing consulting and outsourcing company. We help businesses work more efficiently, spend less, and grow faster.",
 };
 
 // Marquee strip
@@ -115,28 +121,28 @@ export const services = [
     icon: "Briefcase",
     category: "Consulting",
     title: "Consulting Services",
-    desc: "Strategic business and IT consulting that turns complex challenges into clear, executable plans.",
+    desc: "Business and IT consulting that turns tricky problems into a clear plan you can act on.",
     items: ["Business Strategy", "Process Optimization", "IT Consulting", "Digital Transformation"],
   },
   {
     icon: "RefreshCw",
     category: "Outsourcing",
     title: "Outsourcing Services",
-    desc: "Scalable, reliable and cost-effective outsourcing and back-office operations, run end to end.",
+    desc: "Reliable back-office and outsourcing support, run for you from start to finish.",
     items: ["Payroll Management", "HR Outsourcing", "Back Office Support", "Recruitment Process Outsourcing"],
   },
   {
     icon: "Megaphone",
     category: "Marketing",
     title: "Marketing Services",
-    desc: "Creative digital marketing and branding strategies that build brands and drive measurable growth.",
+    desc: "Digital marketing and branding that get your business seen and bring in real customers.",
     items: ["Digital Marketing", "Social Media Marketing", "SEO & SEM", "Branding Solutions"],
   },
   {
     icon: "Code2",
     category: "Technology",
     title: "Technology Services",
-    desc: "Custom software, web and cloud platforms engineered to scale with your business.",
+    desc: "Custom software, websites and cloud setups built to grow right alongside you.",
     items: ["Software Development", "Web Development", "Cloud Solutions", "Application Support"],
   },
 ];

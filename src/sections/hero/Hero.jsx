@@ -5,12 +5,12 @@ import styles from "./Hero.module.scss";
 
 // Capabilities index — `title`/`desc` feed the live caption in the meta row.
 const CAPABILITIES = [
-  { no: "01", label: "Consulting", href: "/services#consulting", title: "Consulting.", desc: "Business and IT strategy that turns complexity into clear, executable plans." },
-  { no: "02", label: "Outsourcing", href: "/services#outsourcing", title: "Outsourcing.", desc: "Reliable teams and back-office operations, scaled to your needs." },
-  { no: "03", label: "Software & Cloud", href: "/services#technology", title: "Software & Cloud.", desc: "Custom platforms engineered to grow with your business." },
-  { no: "04", label: "Staffing", href: "/careers", title: "Staffing.", desc: "Recruitment and managed talent that strengthens your team." },
-  { no: "05", label: "Marketing", href: "/services#marketing", title: "Marketing.", desc: "Brand and digital marketing that drives measurable growth." },
-  { no: "06", label: "Payroll", href: "/services#outsourcing", title: "Payroll.", desc: "Accurate, compliant payroll management, handled end to end." },
+  { no: "01", label: "Consulting", href: "/services#consulting", title: "Consulting.", desc: "Business and IT advice that gives you a clear plan to act on." },
+  { no: "02", label: "Outsourcing", href: "/services#outsourcing", title: "Outsourcing.", desc: "Reliable teams that handle the day-to-day, sized to fit you." },
+  { no: "03", label: "Software & Cloud", href: "/services#technology", title: "Software & Cloud.", desc: "Custom software and cloud setups that grow with you." },
+  { no: "04", label: "Staffing", href: "/careers", title: "Staffing.", desc: "We find the right people and help you keep them." },
+  { no: "05", label: "Marketing", href: "/services#marketing", title: "Marketing.", desc: "Marketing that gets you noticed and brings in customers." },
+  { no: "06", label: "Payroll", href: "/services#outsourcing", title: "Payroll.", desc: "Payroll done right and on time, every month." },
 ];
 
 const DEFAULT_CAP = { title: "Driven by values.", desc: "Focused on results." };
@@ -235,7 +235,7 @@ export default function Hero() {
             <span className={styles.scrollLine} />
           </span>
           <span className="text-right max-[600px]:text-left">
-            Ananthapur, Andhra Pradesh — India
+            Ananthapur, Andhra Pradesh, India
           </span>
         </div>
       </div>

@@ -14,14 +14,14 @@ import styles from "./WhyChooseUs.module.scss";
 
 // Reasons to choose us — icon + headline + one-line proof.
 const REASONS = [
-  { icon: Handshake, title: "End-to-end partner", desc: "Consult, outsource and grow with one accountable team." },
-  { icon: ShieldCheck, title: "Values first", desc: "Integrity, transparency and trust in every engagement." },
-  { icon: TrendingUp, title: "Result driven", desc: "Measured by the outcomes we create, not hours billed." },
+  { icon: Handshake, title: "One team for everything", desc: "Consulting, outsourcing and growth, with no hand-offs in between." },
+  { icon: ShieldCheck, title: "Straight with you", desc: "Honest, open and easy to trust, every time." },
+  { icon: TrendingUp, title: "Focused on results", desc: "We care what gets done, not hours billed." },
   { icon: LayoutGrid, title: "Cross-domain expertise", desc: "Strategy, technology, operations and marketing in one place." },
-  { icon: Gauge, title: "Cost-effective delivery", desc: "Smart processes that cut costs and lift efficiency." },
-  { icon: Scaling, title: "Scales with you", desc: "Flexible models that grow from startup to enterprise." },
-  { icon: LifeBuoy, title: "Always-on support", desc: "A 24/7 support mindset that keeps you moving." },
-  { icon: Award, title: "Proven experience", desc: "Trusted across multiple industries and business stages." },
+  { icon: Gauge, title: "Cost-effective delivery", desc: "Smart ways of working that keep your costs down." },
+  { icon: Scaling, title: "Scales with you", desc: "Flexible enough to fit a startup or a large company." },
+  { icon: LifeBuoy, title: "Always around", desc: "Help when you need it, so you're never stuck." },
+  { icon: Award, title: "Proven experience", desc: "We've worked across plenty of industries and company sizes." },
 ];
 
 export default function WhyChooseUs() {
@@ -34,12 +34,12 @@ export default function WhyChooseUs() {
             Why choose us
           </Reveal>
           <Reveal as="h2" delay={0.05} className={styles.heading}>
-            A partner invested in your <em>growth.</em>
+            We treat your business like our <em>own.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.sub}>
-            We don&apos;t just deliver projects — we take ownership of outcomes.
-            Consulting, outsourcing, technology and marketing, brought together by
-            one team accountable to your results.
+            We stay with you past the launch, and we care how things actually
+            turn out. Consulting, outsourcing, technology and marketing, all
+            from one team that answers to you.
           </Reveal>
           <Reveal delay={0.15}>
             <a href="#contact" className={styles.cta}>

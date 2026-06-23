@@ -10,7 +10,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Why Us",
   description:
-    "Why choose Sree Info Technologies — an end-to-end, values-first partner bringing consulting, outsourcing, technology and marketing together under one accountable team.",
+    "Why choose Sree Info Technologies: one honest, values-first team bringing consulting, outsourcing, technology and marketing together, so you can count on a single partner.",
   path: "/why-us/",
 });
 

@@ -36,11 +36,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata = {
   metadataBase: new URL("https://sreeinfotechnologies.com"),
   title: {
-    default: "Sree Info Technologies Pvt Ltd — Consult. Outsource. Grow.",
+    default: "Sree Info Technologies Pvt Ltd · Consult. Outsource. Grow.",
     template: "%s | Sree Info Technologies",
   },
   description:
-    "Sree Info Technologies Pvt Ltd empowers businesses through innovative consulting, outsourcing, marketing, and technology solutions. Proudly based in Ananthapur, Andhra Pradesh.",
+    "Sree Info Technologies helps businesses cut costs, work smarter and grow, with consulting, outsourcing, marketing and technology from one team. Based in Ananthapur, Andhra Pradesh.",
   keywords: [
     "consulting",
     "outsourcing",
@@ -56,9 +56,9 @@ export const metadata = {
   publisher: "Sree Info Technologies Pvt Ltd",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Sree Info Technologies Pvt Ltd — Consult. Outsource. Grow.",
+    title: "Sree Info Technologies Pvt Ltd · Consult. Outsource. Grow.",
     description:
-      "Your Partner in Success — Consult. Outsource. Grow. Driven by Values, Focused on Results.",
+      "Your Partner in Success. Consult. Outsource. Grow. Driven by Values, Focused on Results.",
     url: "/",
     siteName: "Sree Info Technologies Pvt Ltd",
     type: "website",
@@ -68,15 +68,15 @@ export const metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Sree Info Technologies Pvt Ltd — Consult. Outsource. Grow.",
+        alt: "Sree Info Technologies Pvt Ltd · Consult. Outsource. Grow.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sree Info Technologies Pvt Ltd — Consult. Outsource. Grow.",
+    title: "Sree Info Technologies Pvt Ltd · Consult. Outsource. Grow.",
     description:
-      "Your Partner in Success — Consult. Outsource. Grow. Driven by Values, Focused on Results.",
+      "Your Partner in Success. Consult. Outsource. Grow. Driven by Values, Focused on Results.",
     images: ["/og.png"],
   },
   robots: {

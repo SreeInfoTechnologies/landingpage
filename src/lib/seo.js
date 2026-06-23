@@ -12,7 +12,7 @@ const OG_IMAGE = {
   url: "/og.png",
   width: 1200,
   height: 630,
-  alt: `${company.name} — ${company.tagline}`,
+  alt: `${company.name} · ${company.tagline}`,
 };
 
 export function pageMeta({ title, description, path }) {

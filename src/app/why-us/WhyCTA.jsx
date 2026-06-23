@@ -12,8 +12,8 @@ export default function WhyCTA() {
             Ready to grow with the <em>right partner?</em>
           </h2>
           <p>
-            Tell us where you&apos;re headed — we&apos;ll bring the consulting,
-            technology and marketing to get you there.
+            Tell us where you want to take things, and we&apos;ll bring the
+            consulting, tech and marketing to help you get there.
           </p>
           <div className={styles.ctaRow}>
             <a className={styles.btnGold} href="/contact">

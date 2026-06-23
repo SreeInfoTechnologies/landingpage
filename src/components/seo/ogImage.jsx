@@ -10,7 +10,7 @@ import { company } from "@/lib/data";
  * run `npm run build`, then `cp out/opengraph-image public/og.png` and remove it.
  */
 export const ogSize = { width: 1200, height: 630 };
-export const ogAlt = `${company.name} — ${company.tagline}`;
+export const ogAlt = `${company.name} · ${company.tagline}`;
 
 const NAVY = "#15233f";
 const NAVY_DEEP = "#0f1a30";
@@ -43,7 +43,7 @@ export default function OgImage() {
       <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
         <div style={{ fontSize: "92px", fontWeight: 800, lineHeight: 1.04 }}>{company.tagline}</div>
         <div style={{ display: "flex", fontSize: "34px", color: "rgba(255,255,255,0.78)", maxWidth: "920px", lineHeight: 1.3 }}>
-          Consulting, outsourcing, marketing and technology — handled by one team.
+          Consulting, outsourcing, marketing and technology, all handled by one team.
         </div>
       </div>
 

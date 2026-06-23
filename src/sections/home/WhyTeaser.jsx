@@ -3,10 +3,10 @@ import Reveal, { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import styles from "./home.module.scss";
 
 const REASONS = [
-  { icon: Handshake, title: "End-to-end partner", desc: "One accountable team, start to finish." },
-  { icon: TrendingUp, title: "Result driven", desc: "Measured by outcomes, not hours." },
-  { icon: ShieldCheck, title: "Values first", desc: "Integrity and transparency, always." },
-  { icon: LifeBuoy, title: "Always-on support", desc: "A 24/7 support mindset." },
+  { icon: Handshake, title: "One team for everything", desc: "From the first idea to ongoing support." },
+  { icon: TrendingUp, title: "Focused on results", desc: "We care what gets done, not hours logged." },
+  { icon: ShieldCheck, title: "Straight with you", desc: "Honest and open, every step." },
+  { icon: LifeBuoy, title: "Always around", desc: "Help whenever you need it." },
 ];
 
 export default function WhyTeaser() {
@@ -18,11 +18,11 @@ export default function WhyTeaser() {
             Why choose us
           </Reveal>
           <Reveal as="h2" delay={0.05} className={styles.heading}>
-            A partner invested in your <em>growth.</em>
+            We treat your business like our <em>own.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.sub}>
-            We don&apos;t just deliver projects — we take ownership of outcomes,
-            with one team accountable from first strategy to ongoing support.
+            You work with the same team from start to finish. We help you plan
+            it, then stay on to keep everything running.
           </Reveal>
           <Reveal delay={0.15}>
             <a className={styles.whyCta} href="/why-us">

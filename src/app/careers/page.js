@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Careers",
   description:
-    "Build your career with Sree Info Technologies Pvt Ltd — professional growth, learning opportunities, a positive work culture and current openings across technology, marketing and outsourcing.",
+    "Build your career with Sree Info Technologies. Room to grow, real learning, a good place to work, and current openings across technology, marketing and outsourcing.",
   path: "/careers/",
 });
 

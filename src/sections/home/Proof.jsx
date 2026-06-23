@@ -8,7 +8,7 @@ export default function Proof() {
     <section className={styles.proof}>
       <div className="container-x">
         <Reveal as="p" className={styles.proofLab}>
-          Trusted to deliver
+          A bit about us
         </Reveal>
         <div className={styles.proofGrid}>
           {stats.map((s) => (

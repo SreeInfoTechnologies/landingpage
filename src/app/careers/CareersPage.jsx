@@ -16,10 +16,9 @@ export default function CareersPage() {
             Build your career <em>with us.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.lead}>
-            We believe people are at the heart of everything we do. By nurturing
-            talent, encouraging growth and rewarding ambition, we help our team
-            build successful, lasting careers — and shape the future of our
-            business together.
+            Our people are the business, really. We give them room to grow, back
+            their ambitions, and help them build careers worth staying for. And
+            we work out where we&apos;re going next, together.
           </Reveal>
         </div>
       </section>
@@ -59,8 +58,8 @@ export default function CareersPage() {
             Current <em>openings.</em>
           </Reveal>
           <Reveal as="p" delay={0.1} className={styles.sub}>
-            We&apos;re always looking for talented people across our disciplines.
-            Explore where you could fit in.
+            We&apos;re always on the lookout for good people across the board.
+            Take a look and see where you&apos;d fit.
           </Reveal>
 
           <Stagger className={styles.jobsList} stagger={0.08}>
@@ -88,8 +87,8 @@ export default function CareersPage() {
               Don&apos;t see your role? <em>Get in touch.</em>
             </h2>
             <p>
-              We&apos;re always happy to hear from ambitious people. Send us your
-              details and let&apos;s start a conversation.
+              We love hearing from people who want to do good work. Send over
+              your details and let&apos;s talk.
             </p>
             <div className={styles.ctaRow}>
               <a className={styles.btnGold} href="/contact">
