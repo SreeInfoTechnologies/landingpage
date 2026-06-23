@@ -1,6 +1,14 @@
 import { company } from "@/lib/data";
 
-/** Shared 1200x630 social share card, rendered by next/og at build time. */
+/**
+ * Source design for the 1200x630 social share card (public/og.png).
+ *
+ * We ship a static public/og.png rather than a next/og metadata route because
+ * GitHub Pages serves extension-less route files as application/octet-stream,
+ * which social/AI scrapers reject. To regenerate after editing this design:
+ * temporarily add app/opengraph-image.js (`new ImageResponse(<OgImage/>, ogSize)`),
+ * run `npm run build`, then `cp out/opengraph-image public/og.png` and remove it.
+ */
 export const ogSize = { width: 1200, height: 630 };
 export const ogAlt = `${company.name} — ${company.tagline}`;
 
