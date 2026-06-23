@@ -1,4 +1,5 @@
-// Founder profile / portfolio — /sainath
+// Founder profile — /sainath
+// A company-focused profile for the Founder & Director (no personal CV detail).
 // Shares the About page's dark-luxe palette so it feels native to the site.
 // Palette: paper #F1F3F8 · text #ccd5e6 · muted #9AA5B9 · gold #CBA85F
 //          gold-soft #E4CF99 · line rgba(255,255,255,.10) · gold-line rgba(203,168,95,.28)
@@ -57,7 +58,7 @@
   font-size: clamp(1rem, 1.4vw, 1.12rem);
   line-height: 1.7;
   margin-top: 18px;
-  max-width: 60ch;
+  max-width: 62ch;
 }
 .text {
   color: #9aa5b9;
@@ -70,15 +71,6 @@
     color: #f1f3f8;
     font-weight: 600;
   }
-}
-.chip {
-  font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 12px;
-  color: #ccd5e6;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(203, 168, 95, 0.28);
-  background: rgba(203, 168, 95, 0.05);
 }
 .hairline {
   position: relative;
@@ -283,7 +275,7 @@
   }
 }
 
-// ---------- about + leadership ----------
+// ---------- profile + leadership ----------
 .about {
   padding: clamp(52px, 8vh, 98px) 0;
   background: linear-gradient(180deg, #0a1224, #0a1326);
@@ -304,6 +296,19 @@
   line-height: 1.5;
   color: #e4cf99;
   max-width: 56ch;
+}
+/* Hand-signed look — script font, brand gold, intentionally faint:
+   present but not loud, like a signature under a letter. */
+.signature {
+  margin: 26px 0 0;
+  font-family: var(--font-script), cursive;
+  font-weight: 600;
+  font-size: clamp(2rem, 3.6vw, 2.7rem);
+  line-height: 1;
+  color: #cba85f;
+  opacity: 0.42;
+  user-select: none;
+  pointer-events: none;
 }
 .focusCards {
   display: grid;
@@ -346,246 +351,31 @@
   margin-bottom: 16px;
 }
 
-// ---------- experience timeline ----------
-.exp {
+// ---------- vision & mission ----------
+.vm {
   padding: clamp(56px, 9vh, 104px) 0;
   background: linear-gradient(180deg, #0a1326, #080d18);
 }
-.timeline {
-  position: relative;
-  margin-top: clamp(34px, 5vh, 52px);
-  padding-left: 34px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 6px;
-    bottom: 6px;
-    width: 1px;
-    background: linear-gradient(180deg, rgba(203, 168, 95, 0.5), rgba(203, 168, 95, 0.08));
-  }
-}
-.tlItem {
-  position: relative;
-
-  & + & {
-    margin-top: 18px;
-  }
-}
-.tlDot {
-  position: absolute;
-  left: -34px;
-  top: 26px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #0a1326;
-  border: 2px solid #cba85f;
-  box-shadow: 0 0 0 5px rgba(203, 168, 95, 0.1);
-}
-.job {
-  background: linear-gradient(180deg, #111d38, #0b1426);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 18px;
-  padding: 24px clamp(22px, 3vw, 30px);
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-
-  &:hover {
-    transform: translateY(-3px);
-    border-color: rgba(203, 168, 95, 0.28);
-    box-shadow: 0 28px 60px -34px rgba(0, 0, 0, 0.6);
-  }
-}
-.jobHead {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 10px 20px;
-  margin-bottom: 16px;
-
-  h3 {
-    font-family: var(--font-poppins), system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #f1f3f8;
-    line-height: 1.25;
-  }
-}
-.jobOrg {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 6px;
-  font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #cba85f;
-
-  svg {
-    color: #cba85f;
-  }
-}
-.jobLoc {
-  color: #9aa5b9;
-  font-weight: 400;
-}
-.period {
-  flex-shrink: 0;
-  font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.6px;
-  color: #9aa5b9;
-  padding: 6px 13px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.03);
-  white-space: nowrap;
-}
-.periodNow {
-  color: #e4cf99;
-  border-color: rgba(203, 168, 95, 0.4);
-  background: rgba(203, 168, 95, 0.08);
-}
-.jobPoints {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-
-  li {
-    position: relative;
-    padding-left: 22px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #9aa5b9;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 2px;
-      top: 9px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #cba85f;
-      opacity: 0.7;
-    }
-  }
-}
-
-// ---------- skills ----------
-.skills {
-  padding: clamp(56px, 9vh, 104px) 0;
-  background: linear-gradient(180deg, #080d18, #0a1326);
-}
-.skillGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: clamp(34px, 5vh, 52px);
-}
-.skillCard {
-  height: 100%;
-  background: linear-gradient(180deg, #111d38, #0b1426);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 18px;
-  padding: 26px 24px;
-  transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
-
-  &:hover {
-    transform: translateY(-5px);
-    border-color: rgba(203, 168, 95, 0.28);
-    box-shadow: 0 30px 64px -34px rgba(0, 0, 0, 0.6);
-  }
-  h3 {
-    font-family: var(--font-poppins), system-ui, sans-serif;
-    font-size: 15.5px;
-    font-weight: 600;
-    color: #f1f3f8;
-    margin-bottom: 14px;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 8px;
-  }
-  li {
-    font-size: 13px;
-    line-height: 1.45;
-    color: #9aa5b9;
-    padding-left: 16px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: #cba85f;
-      opacity: 0.65;
-    }
-  }
-}
-.skillIc {
-  width: 48px;
-  height: 48px;
-  border-radius: 13px;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle at 32% 28%, #1b2a48, #0c1322);
-  border: 1px solid rgba(203, 168, 95, 0.28);
-  color: #e4cf99;
-  margin-bottom: 18px;
-}
-.toolsRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 14px 18px;
-  margin-top: 28px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.toolsLabel {
-  font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #9aa5b9;
-}
-.toolChips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-// ---------- education + languages ----------
-.edu {
-  padding: clamp(52px, 8vh, 96px) 0;
-  background: linear-gradient(180deg, #0a1326, #0a1224);
-}
-.eduGrid {
+.vmGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  margin-top: clamp(34px, 5vh, 52px);
 }
-.eduCard {
+.vmcard {
   position: relative;
   overflow: hidden;
   background: linear-gradient(180deg, #111d38, #0b1426);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 22px;
-  padding: clamp(28px, 3vw, 40px);
+  padding: clamp(30px, 3vw, 44px);
+  transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
 
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(203, 168, 95, 0.28);
+    box-shadow: 0 34px 72px -34px rgba(0, 0, 0, 0.6);
+  }
   &::before {
     content: "";
     position: absolute;
@@ -596,25 +386,17 @@
     background: radial-gradient(circle, rgba(203, 168, 95, 0.1), transparent 65%);
     pointer-events: none;
   }
-  h3 {
-    font-family: var(--font-cormorant), Georgia, serif;
-    font-weight: 500;
-    font-size: 1.7rem;
-    line-height: 1.15;
-    color: #f1f3f8;
-    margin-bottom: 8px;
-  }
 }
-.eduIc {
-  width: 56px;
-  height: 56px;
-  border-radius: 15px;
+.vmIc {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
   display: grid;
   place-items: center;
   background: radial-gradient(circle at 32% 28%, #1b2a48, #0c1322);
   border: 1px solid rgba(203, 168, 95, 0.28);
   color: #e4cf99;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .tag {
   font-family: var(--font-poppins), system-ui, sans-serif;
@@ -622,35 +404,68 @@
   letter-spacing: 2.4px;
   text-transform: uppercase;
   color: #cba85f;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
-.eduText {
-  font-size: 14.5px;
-  color: #9aa5b9;
-  line-height: 1.6;
+.vmtext {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  font-family: var(--font-cormorant), Georgia, serif;
+  color: #ccd5e6;
+  line-height: 1.55;
 }
-.eduYear {
-  display: inline-block;
-  margin-top: 14px;
-  font-family: var(--font-poppins), system-ui, sans-serif;
-  font-size: 12px;
-  color: #e4cf99;
-  padding: 5px 14px;
-  border-radius: 999px;
+
+// ---------- what he leads ----------
+.leads {
+  padding: clamp(56px, 9vh, 104px) 0;
+  background: linear-gradient(180deg, #080d18, #0a1326);
+}
+.leadsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: clamp(34px, 5vh, 52px);
+}
+.leadCard {
+  height: 100%;
+  background: linear-gradient(180deg, #111d38, #0b1426);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 28px;
+  transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(203, 168, 95, 0.28);
+    box-shadow: 0 32px 70px -32px rgba(0, 0, 0, 0.62);
+  }
+  h3 {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f1f3f8;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 13.5px;
+    color: #9aa5b9;
+    line-height: 1.65;
+  }
+}
+.leadIc {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 32% 28%, #1b2a48, #0c1322);
   border: 1px solid rgba(203, 168, 95, 0.28);
-  background: rgba(203, 168, 95, 0.05);
-}
-.langRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 4px;
+  color: #e4cf99;
+  margin-bottom: 18px;
 }
 
 // ---------- closing cta ----------
 .finalCta {
   padding: clamp(64px, 10vh, 118px) 0;
-  background: linear-gradient(180deg, #0a1224, #0a1326);
+  background: linear-gradient(180deg, #0a1326, #0a1224);
 }
 .ctaPanel {
   position: relative;
@@ -698,11 +513,6 @@
 }
 
 // ---------- responsive ----------
-@media (max-width: 980px) {
-  .skillGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media (max-width: 920px) {
   .heroGrid {
     grid-template-columns: 1fr;
@@ -715,18 +525,13 @@
     grid-template-columns: 1fr;
     gap: 34px;
   }
-  .eduGrid {
+  .vmGrid,
+  .leadsGrid {
     grid-template-columns: 1fr;
   }
 }
 @media (max-width: 620px) {
   .stats {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .skillGrid {
-    grid-template-columns: 1fr;
-  }
-  .jobHead {
-    flex-direction: column;
   }
 }

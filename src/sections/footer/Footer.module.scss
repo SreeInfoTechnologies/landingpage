@@ -119,6 +119,37 @@
   gap: 20px;
 }
 
+// Developer signature — sits just above the page background, so it's barely
+// there at a glance but fully legible when you look (and on hover/focus).
+.signature {
+  margin-top: 16px;
+  text-align: center;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 1.2px;
+  color: rgba(154, 165, 185, 0.16);
+  user-select: none;
+  transition: color 0.45s ease;
+  cursor: default;
+
+  &:hover,
+  &:focus-within {
+    color: rgba(154, 165, 185, 0.55);
+  }
+  &:hover .sigName,
+  &:focus-within .sigName {
+    color: #e4cf99;
+  }
+}
+.sigName {
+  font-family: var(--font-script), "Dancing Script", cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: rgba(228, 207, 153, 0.26);
+  transition: color 0.45s ease;
+  vertical-align: -1px;
+}
+
 @media (max-width: 920px) {
   .grid {
     grid-template-columns: 1fr 1fr;

@@ -95,6 +95,11 @@ export default function Footer() {
             <a href="/terms">Terms</a>
           </span>
         </div>
+
+        {/* Developer signature — discreet by design, legible on a closer look. */}
+        <p className={styles.signature} title="Designed & developed by Bhogesh">
+          Designed &amp; developed by <span className={styles.sigName}>Bhogesh</span>
+        </p>
       </div>
     </footer>
   );

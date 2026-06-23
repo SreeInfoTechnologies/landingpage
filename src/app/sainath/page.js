@@ -10,7 +10,7 @@ import { founder } from "@/lib/data";
 export const metadata = pageMeta({
   title: `${founder.name} — ${founder.jobTitle}`,
   description:
-    "Medimi Sainath Reddy is the Founder & Director of Sree Info Technologies and a Microsoft Azure cloud engineer with 4.5+ years building cloud infrastructure for global enterprises like IBM and Accenture.",
+    "Meet Medimi Sainath Reddy, Founder & Director of Sree Info Technologies — leading the company across consulting, outsourcing, technology and marketing to help businesses grow.",
   path: "/sainath/",
 });
 

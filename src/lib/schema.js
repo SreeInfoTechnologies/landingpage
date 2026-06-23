@@ -95,23 +95,12 @@ export function founderNode() {
 }
 
 /**
- * ProfilePage graph for /sainath — an enriched founder Person (same @id, so the
- * graph merges with the site-wide node) plus the ProfilePage that frames it.
- * Adds only CV-verified facts: alumniOf, knowsAbout (skills), and occupation.
+ * ProfilePage graph for /sainath — the founder Person (same @id, so it merges
+ * with the site-wide node) plus the ProfilePage that frames it. Company-focused:
+ * the profile presents Sainath in his role as Founder & Director.
  */
 export function profileGraph(path = "/sainath/") {
-  const knowsAbout = [
-    ...new Set(founderProfile.skills.flatMap((g) => g.items)),
-  ];
-  const person = {
-    ...founderNode(),
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: founderProfile.education.school,
-    },
-    knowsAbout,
-    knowsLanguage: founderProfile.languages,
-  };
+  const person = founderNode();
   const profilePage = {
     "@type": "ProfilePage",
     "@id": `${BASE}${path}#webpage`,
