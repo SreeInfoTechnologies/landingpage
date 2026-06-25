@@ -2,6 +2,7 @@ import Script from "next/script";
 import { Poppins, Inter, Dancing_Script, Cormorant_Garamond } from "next/font/google";
 import JsonLd from "@/components/seo/JsonLd";
 import { siteGraph } from "@/lib/schema";
+import { company } from "@/lib/data";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -41,16 +42,8 @@ export const metadata = {
   },
   description:
     "Sree Info Technologies helps businesses cut costs, work smarter and grow, with consulting, outsourcing, marketing and technology from one team. Based in Ananthapur, Andhra Pradesh.",
-  keywords: [
-    "consulting",
-    "outsourcing",
-    "payroll management",
-    "digital marketing",
-    "software development",
-    "cloud solutions",
-    "recruitment",
-    "Ananthapur",
-  ],
+  // No `keywords` meta — Google has ignored it since 2009 (Search Central,
+  // "special tags"). Topical relevance comes from real content + structured data.
   authors: [{ name: "Sree Info Technologies Pvt Ltd" }],
   creator: "Sree Info Technologies Pvt Ltd",
   publisher: "Sree Info Technologies Pvt Ltd",
@@ -90,15 +83,40 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
+  applicationName: company.name,
+  // PWA manifest (app/manifest.js → /manifest.webmanifest) — ships the PNG icon
+  // set Google/Android consume. Previously the site had SVG icons only.
+  manifest: "/manifest.webmanifest",
+  // Full favicon set. Order: .ico (read by Googlebot-Image from the home-page
+  // <head>) → crisp SVG for modern browsers → PNG sizes (Google requires a
+  // square ≥8×8 and recommends >48px; 96/192 cover that) → 180px Apple touch
+  // icon (must be PNG — iOS does not render SVG). The square brand mark
+  // (favicon.svg) replaces the old wordmark SVG, whose aspect ratio was wrong
+  // for a favicon and is a likely reason the icon failed in Search.
   icons: {
-    icon: "/sree-logo.svg",
-    shortcut: "/sree-logo.svg",
-    apple: "/sree-logo.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  appleWebApp: {
+    capable: true,
+    title: company.shortName,
+    statusBarStyle: "default",
+  },
+  category: "technology",
+  formatDetection: { telephone: true, address: true, email: true },
 };
 
 export const viewport = {
   themeColor: "#15233f",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }) {

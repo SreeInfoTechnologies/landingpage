@@ -34,8 +34,17 @@ export function organizationNode() {
     legalName: company.legalName,
     alternateName: company.shortName,
     url: `${BASE}/`,
-    logo: { "@type": "ImageObject", url: abs("/sree-logo.svg") },
-    image: abs("/sree-logo.svg"),
+    // Raster logo (512×512 PNG) — Google's logo / Knowledge Panel pipeline reads
+    // raster reliably; an SVG logo is a common reason the logo never appears.
+    logo: {
+      "@type": "ImageObject",
+      url: abs("/logo.png"),
+      contentUrl: abs("/logo.png"),
+      width: 512,
+      height: 512,
+      caption: company.name,
+    },
+    image: abs("/logo.png"),
     description: company.pitch,
     slogan: company.tagline,
     email: company.email,
@@ -88,7 +97,11 @@ export function founderNode() {
     description: founder.bio,
     image: abs(founder.image),
     email: founder.email,
+    // Canonical on-site profile — anchors the founder entity to a real page.
+    url: abs("/sainath/"),
     worksFor: { "@id": ORG_ID },
+    founderOf: { "@id": ORG_ID },
+    knowsAbout: specializations,
   };
   if (founder.sameAs?.length) node.sameAs = founder.sameAs;
   return node;
@@ -150,7 +163,7 @@ export function webPageNode({ type = "WebPage", path, name, description, mainEnt
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     inLanguage: "en-IN",
-    primaryImageOfPage: { "@type": "ImageObject", url: abs("/sree-logo.svg") },
+    primaryImageOfPage: { "@type": "ImageObject", url: abs("/og.png") },
   };
   if (mainEntityOrg) node.mainEntity = { "@id": ORG_ID };
   return node;
@@ -180,11 +193,21 @@ export function servicesGraph() {
   };
 }
 
-/** FAQPage node from [{ question, answer }] — used by the FAQ section (Step 3). */
-export function faqPageNode(faqs) {
+/**
+ * FAQPage node from [{ question, answer }] — mirrors the visible FAQ accordion.
+ * Linked into the site graph (isPartOf WebSite, about Organization) so AI answer
+ * engines and Bing read it as authoritative brand Q&A. Note: Google retired FAQ
+ * *rich results* in May 2026, so this yields no Google FAQ snippet — its value is
+ * AI citation, voice, semantic understanding and passage indexing.
+ */
+export function faqPageNode(faqs, path = "/") {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": `${BASE}${path}#faq`,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": ORG_ID },
+    inLanguage: "en-IN",
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.question,

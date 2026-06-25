@@ -28,10 +28,15 @@ export default function ProfilePage() {
         <div className={`container-x ${styles.heroGrid}`}>
           <Reveal className={styles.portraitWrap}>
             <figure className={styles.portrait}>
+              {/* LCP image on /sainath — eager + high priority + intrinsic
+                  dimensions (next/image is bypassed in the static export). */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={founder.image}
                 alt={`${founder.name}, ${founder.jobTitle} of ${company.name}`}
+                width={1000}
+                height={1000}
+                fetchPriority="high"
               />
               <figcaption className={styles.badge}>
                 <span className={styles.badgeName}>{founder.name}</span>

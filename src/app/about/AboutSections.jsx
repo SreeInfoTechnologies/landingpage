@@ -101,6 +101,8 @@ export default function AboutSections() {
               <img
                 src={founder.image}
                 alt={`${founder.name}, ${founder.jobTitle} of ${company.name}`}
+                width={1000}
+                height={1000}
                 loading="lazy"
               />
               <figcaption className={styles.badge}>

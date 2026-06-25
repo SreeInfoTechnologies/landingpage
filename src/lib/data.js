@@ -279,3 +279,52 @@ export const contact = {
     },
   ],
 };
+
+// Frequently asked questions — every answer is true to the facts above (no
+// invented dates, headcounts or claims). Rendered as a visible accordion on the
+// home page AND emitted as FAQPage JSON-LD. Written as self-contained answers to
+// real brand/entity questions ("who founded…", "where is…", "what does…") so
+// AI answer engines (ChatGPT, Gemini, Perplexity, Copilot) and voice assistants
+// can extract and cite them directly.
+export const faqs = [
+  {
+    question: "What does Sree Info Technologies do?",
+    answer:
+      "Sree Info Technologies Pvt Ltd is a consulting and outsourcing company based in Ananthapur, Andhra Pradesh, India. It brings consulting, outsourcing, marketing and technology together under one team, helping businesses cut costs, work more efficiently and grow.",
+  },
+  {
+    question: "Who is the founder of Sree Info Technologies?",
+    answer:
+      "Sree Info Technologies was founded by Medimi Sainath Reddy, who serves as its Founder & Director. He leads the company across consulting, outsourcing, technology and marketing, staying hands-on with both the team and clients.",
+  },
+  {
+    question: "Where is Sree Info Technologies located?",
+    answer:
+      "Sree Info Technologies is based in Ananthapur, Andhra Pradesh, India, and works with clients across the country.",
+  },
+  {
+    question: "What services does Sree Info Technologies offer?",
+    answer:
+      "Four areas: Consulting (business and IT strategy, process optimization, digital transformation), Outsourcing (payroll management, HR outsourcing, back-office support, recruitment process outsourcing), Marketing (digital marketing, social media, SEO and SEM, branding) and Technology (software development, web development, cloud solutions, application support).",
+  },
+  {
+    question: "Does Sree Info Technologies provide payroll and HR outsourcing?",
+    answer:
+      "Yes. Payroll management covers salary processing, tax and statutory compliance, attendance integration, payslip generation and payroll reporting, alongside HR outsourcing, back-office support and recruitment process outsourcing.",
+  },
+  {
+    question: "Can Sree Info Technologies build custom software and websites?",
+    answer:
+      "Yes. The technology team builds custom software, websites and cloud setups, and provides ongoing application support, designed to scale as your business grows.",
+  },
+  {
+    question: "What makes Sree Info Technologies different?",
+    answer:
+      "It combines consulting, outsourcing, marketing and technology in a single team, so you have one dependable partner instead of many separate vendors. The company is client-focused, results-driven and integrity-first, and measures success by what clients achieve rather than hours billed.",
+  },
+  {
+    question: "How can I contact Sree Info Technologies?",
+    answer:
+      "Call +91 90444 48837, email support@sreeinfotechnologies.com, or use the contact form at sreeinfotechnologies.com/contact. The company is based in Ananthapur, Andhra Pradesh, India.",
+  },
+];

@@ -10,9 +10,9 @@ const AI_CRAWLERS = [
   "GPTBot", // OpenAI training
   "OAI-SearchBot", // ChatGPT search
   "ChatGPT-User", // ChatGPT browsing
-  "ClaudeBot", // Anthropic crawler
-  "Claude-Web",
-  "anthropic-ai",
+  "ClaudeBot", // Anthropic general crawler
+  "Claude-User", // Claude user-initiated fetches
+  "Claude-SearchBot", // Claude search — required to be citable in Claude
   "PerplexityBot", // Perplexity index
   "Perplexity-User",
   "Google-Extended", // Gemini / AI Overviews
